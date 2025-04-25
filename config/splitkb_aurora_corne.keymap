@@ -9,17 +9,18 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-&mt {
-        quick-tap-ms = <199>;
-};
-
-&nice_view_spi {
-    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-};
 
 
 
 / {
+        &mt {
+                quick-tap-ms = <199>;
+        };
+
+        &nice_view_spi {
+        cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -49,7 +50,7 @@
    &trans &kp C_PWR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR         &trans  &trans  &trans  &trans       &trans         &trans
                         &trans  &trans  &trans        &kp DEL  &trans   &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
                 };
 
                 raise_layer {
