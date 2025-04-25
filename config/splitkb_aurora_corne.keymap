@@ -11,7 +11,7 @@
 
 &mt {
         quick-tap-ms = <199>;
-}
+};
 
 &nice_view_spi {
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
@@ -35,7 +35,7 @@
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
                   &kp C_PLAY_PAUSE &mo 1 &mt LGUI BSPC   &kp SPACE &mo 2 &kp RALT
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
