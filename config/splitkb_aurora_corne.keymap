@@ -49,7 +49,7 @@
                         bindings = <
    &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp LG(LA(LEFT)) &kp LG(LA(RIGHT))  &kp LA(3) &kp LBRC &kp RBRC &kp LBKT &kp RBKT  &kp PLUS
    &trans &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &kp LC(LEFT) &kp LC(RIGHT)   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp UNDERSCORE &kp MINUS
-   &trans &kp C_PWR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR         &trans  &trans  &trans  &trans       &trans         &trans
+   &trans &kp C_PWR &trans  &trans  &trans  &kp PRINTSCREEN        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_NXT &trans  &bt BT_CLR &trans  
                         &trans  &trans  &trans        &kp DEL  &trans   &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
