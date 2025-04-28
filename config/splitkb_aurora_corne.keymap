@@ -13,7 +13,12 @@
 };
 
 &mt {
-        quick-tap-ms = <199>;
+    quick-tap-ms = <199>;
+    flavor = "tap-preferred";
+};
+
+&lt {
+    flavor = "tap-preferred";
 };
 
 &nice_view_spi {
