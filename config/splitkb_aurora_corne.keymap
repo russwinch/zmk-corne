@@ -18,7 +18,7 @@
 };
 
 &lt {
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";
 };
 
 &nice_view_spi {
@@ -71,7 +71,7 @@
    &trans &kp C_PWR &tog 1  &trans  &trans  &kp PRINTSCREEN        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_NXT &trans  &bt BT_CLR &trans  
                         &trans  &trans  &trans        &kp DEL  &trans   &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_NEXT C_PREV>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
                 };
 
                 raise_layer {
