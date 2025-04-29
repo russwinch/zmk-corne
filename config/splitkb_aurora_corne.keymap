@@ -56,7 +56,7 @@
                         bindings = <
    &trans &trans    &trans &trans &kp LG(LA(LEFT)) &kp LG(LA(RIGHT))        &kp LA(3)  &kp LBRC   &kp RBRC   &kp LBKT  &kp RBKT       &kp PLUS
    &trans &trans    &trans &trans &kp LC(LEFT)     &kp LC(RIGHT)            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT &kp UNDERSCORE &kp MINUS
-   &trans &kp C_PWR &tog 1 &kp PSCRN &kp LC(DOWN) &kp LC(UP)                &bt BT_PRV &bt BT_NXT &bt BT_CLR &trans    &trans         &trans  
+   &trans &kp C_PWR &tog 1 &kp PSCRN &kp LC(UP) &kp LC(DOWN)                &bt BT_PRV &bt BT_NXT &bt BT_CLR &trans    &trans         &trans  
                            &trans &trans           &trans                   &kp DEL    &trans     &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
