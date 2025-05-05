@@ -28,6 +28,16 @@
 };
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <2 3>;
+            then-layer = <4>;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -66,8 +76,18 @@
                         bindings = <
    &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp EQUAL
    &kp GRAVE &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp DOT
-   &trans    &trans   &trans &trans   &trans   &trans           &trans    &kp LBRC &kp RBRC  &kp LBKT &kp RBKT &trans
+   &trans    &trans   &trans &trans   &trans   &trans           &kp LBRC  &kp RBRC &kp LBKT  &kp RBKT &kp DOT  &trans
                              &trans   &trans   &kp TAB          &trans    &trans   &trans
+                        >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+                tri_layer {
+                        display-name = "Tri";
+                        bindings = <
+   &trans &trans &trans &trans  &trans &trans        &kp MINUS &kp N7 &kp N8 &kp N9 &kp BSLH  &trans
+   &trans &trans &trans &trans  &trans &trans        &kp PLUS  &kp N4 &kp N5 &kp N6 &kp ASTRK &trans
+   &trans &trans &trans &trans  &trans &trans        &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &trans
+                        &trans  &trans &trans        &trans    &trans &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
