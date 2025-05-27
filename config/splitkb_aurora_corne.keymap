@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 // layers
-#define MAC     0
-#define WIN     1
-#define LOWER   2
-#define RAISE   3
-#define TRI     4
+#define L_MAC   0
+#define L_WIN   1
+#define L_LOW   2
+#define L_RAI   3
+#define L_TRI   4
 
 #define XXX     &none
 #define ___     &trans
@@ -77,8 +77,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <TRI>;
+            if-layers = <L_LOW L_RAI>;
+            then-layer = <L_TRI>;
         };
     };
 };
@@ -90,15 +90,15 @@
                 mac_layer {
                         display-name = "Mac";
                         bindings = <
-   &kp TAB       &kp Q          &kp W       &kp E       &kp R        &kp T                &kp Y           &kp U         &kp I       &kp O       &kp P           &kp BSLH
-   &mt LCTRL ESC &hml LCTRL A   &hml LALT S &hml LGUI D &hml LSHFT F &kp G                &kp H           &hmr RSHFT J  &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI &mt RCTRL SQT
-   &kp LSHFT     &kp Z          &kp X       &kp C       &kp V        &kp B                &kp N           &kp M         &kp COMMA   &kp DOT     &kp FSLH        &mt RSHFT RET
-                             &kp C_MUTE &lt LOWER ESC &mt LGUI BSPC                       &mt RSHFT SPACE &lt RAISE RET &kp C_PP
+   XXX  &kp Q          &kp W       &kp E       &kp R        &kp T                &kp Y           &kp U         &kp I       &kp O       &kp P           XXX
+   XXX  &hml LCTRL A   &hml LALT S &hml LGUI D &hml LSHFT F &kp G                &kp H           &hmr RSHFT J  &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI XXX
+   XXX  &kp Z          &kp X       &kp C       &kp V        &kp B                &kp N           &kp M         &kp COMMA   &kp DOT     &kp FSLH        XXX
+                                   &kp C_MUTE  &lt L_LOW ESC &mt LGUI BSPC       &mt RSHFT SPACE &lt L_RAI RET &kp C_PP
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
                 };
                 windows_layer {
-                        display-name = "Win";
+                        display-name = "Windows";
                         bindings = <
             ___ ___ ___ ___ ___ ___               ___ ___ ___ ___ ___ ___
    &mt LGUI ESC ___ ___ ___ ___ ___               ___ ___ ___ ___ ___ &mt RGUI SQT
@@ -135,7 +135,7 @@ XXX ___           ___           ___           ___           ___             ___ 
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 XXX &kp C_PREV    &kp C_PP      &kp C_NEXT    ___           ___             ___           ___           ___           ___           ___          XXX    // 12-17 | 18-23
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-XXX &kp C_PWR     &to MAC       &to WIN       ___           ___             &bt BT_PRV    &bt BT_NXT    ___           ___           &bt BT_CLR   XXX    // 24-29 | 30-35
+XXX &kp C_PWR     &to L_MAC     &to L_WIN     ___           ___             &bt BT_PRV    &bt BT_NXT    ___           ___           &bt BT_CLR   XXX    // 24-29 | 30-35
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┼─────────────╯
                                 ___           ___           ___             ___           ___           ___                                             // 36-38 | 39-41
 //                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
