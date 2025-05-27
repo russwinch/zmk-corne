@@ -100,20 +100,20 @@
                 windows_layer {
                         display-name = "Windows";
                         bindings = <
-            ___ ___ ___ ___ ___ ___               ___ ___ ___ ___ ___ ___
-   &mt LGUI ESC ___ ___ ___ ___ ___               ___ ___ ___ ___ ___ &mt RGUI SQT
-            ___ ___ ___ ___ ___ ___               ___ ___ ___ ___ ___ ___
-                        ___ ___ &mt LCTRL BSPC    ___ ___ ___
+    ___ ___ ___ ___ ___ ___                                      ___ ___ ___ ___ ___ ___
+    XXX  &hml LGUI A ___ &hml LCTRL D ___ ___                    ___ ___  &hmr RCTRL K ___ &hmr RGUI SEMI XXX
+    ___ ___ ___ ___ ___ ___                                      ___ ___ ___ ___ ___ ___
+                        ___ ___ &mt LCTRL BSPC                   ___ ___ ___
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
                 };
-                lower_layer {
+                lower_mac_layer {
                         display-name = "Lower";
                         bindings = <
-   XXX &kp TAB ___    M_GBP      M_PTAB     M_NTAB            &kp PLUS   &kp MINUS  &kp UNDER  &kp PIPE    &kp BSLH     XXX
-   XXX &kp ESC XXX    &kp PSCRN  M_PDSK     M_NDSK            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp SQT      XXX 
-   XXX XXX     XXX    &kp PSCRN  M_CTRL     M_WINS            XXX        XXX        XXX        &kp EQUAL   &kp DQT      XXX
-                      ___        ___        ___               &kp DEL    ___        ___
+   XXX XXX        XXX      M_GBP      M_PTAB     M_NTAB            &kp PLUS   &kp MINUS  &kp UNDER  &kp PIPE    &kp BSLH     XXX
+   XXX &kp C_PREV &kp C_PP &kp C_NEXT M_PDSK     M_NDSK            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp SQT      XXX 
+   XXX XXX        XXX      &kp PSCRN  M_CTRL     M_WINS            XXX        XXX        XXX        &kp EQUAL   &kp DQT      XXX
+                           ___        ___        ___               &kp DEL    ___        ___
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
                 };
@@ -122,7 +122,7 @@
                         bindings = <
    XXX &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR XXX
    XXX &kp N1    &kp N2    &kp N3   &kp N4   &kp N5           &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   XXX
-   XXX &kp TILDE &kp GRAVE XXX      &kp LBRC &kp RBRC         &kp LBKT  &kp RBKT XXX       &kp DOT  &kp RET  XXX
+   XXX &kp TILDE &kp GRAVE &kp LPAR &kp LBRC &kp LBKT         &kp RBKT  &kp RBRC &kp RPAR  &kp DOT  &kp RET  XXX
                            ___      ___      &kp TAB          ___       ___      ___
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -131,11 +131,11 @@
                         display-name = "Tri";
                         bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-XXX ___           ___           ___           ___           ___             ___           ___           ___           ___           ___          XXX    // 0-5   | 6-11
+XXX XXX           XXX           XXX           XXX           XXX             XXX           XXX           XXX           XXX           XXX          XXX    // 0-5   | 6-11
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-XXX &kp C_PREV    &kp C_PP      &kp C_NEXT    ___           ___             ___           ___           ___           ___           ___          XXX    // 12-17 | 18-23
+XXX XXX           XXX           XXX           XXX           XXX             XXX           XXX           XXX           XXX           XXX          XXX    // 12-17 | 18-23
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-XXX &kp C_PWR     &to L_MAC     &to L_WIN     ___           ___             &bt BT_PRV    &bt BT_NXT    ___           ___           &bt BT_CLR   XXX    // 24-29 | 30-35
+XXX &kp C_PWR     &to L_MAC     &to L_WIN     XXX           XXX             &bt BT_PRV    &bt BT_NXT    XXX           XXX           &bt BT_CLR   XXX    // 24-29 | 30-35
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┼─────────────╯
                                 ___           ___           ___             ___           ___           ___                                             // 36-38 | 39-41
 //                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
