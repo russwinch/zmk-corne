@@ -123,7 +123,10 @@ XXX  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp
                                  &kp C_MUTE    &lt L_LOW ESC &mt LGUI BSPC  &mt RSHFT SPACE &lt L_RAI RET &kp C_PP                                          // 36-38 | 39-41
 //                              ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <
+                            &inc_dec_kp C_VOL_DN C_VOL_UP
+                            &inc_dec_kp UP DN
+                        >;
                 };
                 windows_layer {
                         display-name = "Windows";
@@ -138,7 +141,10 @@ XXX  ___           ___           ___           ___           ___             ___
                                  ___           ___           &mt LCTRL BSPC  ___           ___           ___
 //                              ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <
+                            &inc_dec_kp C_VOL_DN C_VOL_UP
+                            &inc_dec_kp UP DN
+                        >;
                 };
                 lower_mac_layer {
                         display-name = "Lower";
@@ -148,7 +154,10 @@ XXX  ___           ___           ___           ___           ___             ___
    XXX XXX        XXX      &kp PSCRN  M_CTRL     M_WINS            XXX        XXX        XXX        &kp EQUAL   &kp DQT      XXX
                            ___        ___        ___               &kp DEL    ___        ___
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+                        sensor-bindings = <
+                            &inc_dec_kp C_VOL_DN C_VOL_UP
+                            &inc_dec_kp PG_UP PG_DN
+                        >;
                 };
                 raise_layer {
                         display-name = "Raise";
@@ -158,7 +167,10 @@ XXX  ___           ___           ___           ___           ___             ___
    XXX &kp TILDE &kp GRAVE &kp LPAR &kp LBRC &kp LBKT         &kp RBKT  &kp RBRC &kp RPAR  &kp DOT  &kp RET  XXX
                            ___      ___      &kp TAB          ___       ___      ___
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <
+                            &inc_dec_kp C_VOL_DN C_VOL_UP
+                            &inc_dec_kp UP DN
+                        >;
                 };
                 tri_layer {
                         display-name = "Tri";
@@ -173,7 +185,10 @@ XXX &kp C_PWR     &to L_MAC     &to L_WIN     XXX           XXX             &bt 
                                 ___           ___           ___             ___           ___           ___
 //                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <
+                            &inc_dec_kp C_VOL_DN C_VOL_UP
+                            &inc_dec_kp UP DN
+                        >;
                 };
         };
 };
