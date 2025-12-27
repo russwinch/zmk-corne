@@ -126,7 +126,7 @@ XXX  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp
                         >;
                         sensor-bindings = <
                             &inc_dec_kp C_VOL_DN C_VOL_UP
-                            &inc_dec_kp UP DN
+                            &inc_dec_kp UP DOWN
                         >;
                 };
                 windows_layer {
@@ -144,7 +144,7 @@ XXX  ___           ___           ___           ___           ___             ___
                         >;
                         sensor-bindings = <
                             &inc_dec_kp C_VOL_DN C_VOL_UP
-                            &inc_dec_kp UP DN
+                            &inc_dec_kp UP DOWN
                         >;
                 };
                 lower_mac_layer {
@@ -170,11 +170,11 @@ XXX  ___           ___           ___           ___           ___             ___
                         >;
                         sensor-bindings = <
                             &inc_dec_kp C_VOL_DN C_VOL_UP
-                            &inc_dec_kp UP DN
+                            &inc_dec_kp UP DOWN
                         >;
                 };
                 tri_layer {
-                        display-name = "Tri";
+                        display-name = "Shit";
                         bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
 XXX XXX           XXX           XXX           XXX           XXX             XXX           XXX           XXX           XXX           XXX          XXX
@@ -188,7 +188,7 @@ XXX &kp C_PWR     &to L_MAC     &to L_WIN     XXX           &ind_bat        &bt 
                         >;
                         sensor-bindings = <
                             &inc_dec_kp C_VOL_DN C_VOL_UP
-                            &inc_dec_kp UP DN
+                            &inc_dec_kp UP DOWN
                         >;
                 };
         };
