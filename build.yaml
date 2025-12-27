@@ -21,8 +21,10 @@
 include:
   - board: nice_nano_v2
     shield: splitkb_aurora_corne_left nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano_v2
     shield: splitkb_aurora_corne_right nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: seeeduino_xiao_ble
     shield: splitkb_aurora_corne_dongle prospector_adapter
   - board: nice_nano_v2
