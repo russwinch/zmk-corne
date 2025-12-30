@@ -47,19 +47,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         status = "disabled";    
     };
     
-    /* Define a dummy pro_micro nexus to satisfy keymap references */
-    pro_micro: pro_micro_nexus {
-        compatible = "zmk,nexus-pro-micro";
-        #gpio-cells = <2>;
-        gpio-map-mask = <0xffffffff 0xffffffff>;
-        gpio-map-pass-thru = <0 0>;
-        gpio-map = <0 0 &xiao_d 0 0>; /* Map dummy pins to any valid XIAO pin */
-    };
+    pro_micro: pro_micro {};
 
-    nice_view_spi: dummy_spi {
-        compatible = "zmk,mock-spi";
-        status = "disabled";
-        #address-cells = <1>;
-        #size-cells = <0>;
-    };
+    nice_view_spi: dummy_spi {};
 };
